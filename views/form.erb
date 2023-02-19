@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="myForm" action="/operation" method="post">
+      <input type="hidden" name="user_id" value="<%= @user_id %>">
+      <input type="hidden" name="positions" value=<%= @positions.to_json %>>
+      <input type="submit" value="Send">
+    </form>
+    <script>
+      window.onload = function() {
+        document.getElementById("myForm").submit();
+      };
+    </script>
+  </body>
+</html>
